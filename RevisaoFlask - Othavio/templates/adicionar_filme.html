@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+    <h1>Adicionar filme</h1>
+
+        <div class="bloco-filme">
+            <form action="/adicionar_filme" method="POST" class="organizar">
+
+                <label for="nomefilme">Nome do filme:</label>
+                <input type="text" id="nomefilme" name="nomefilme" placeholder="O nome do filme" required>
+
+                <label for="lancamento">Lançamento:</label>
+                <input type="number" id="lancamento" name="lancamento" placeholder="Ano de lançamento do filme" max="2024" min="1888" required>
+
+                <div>
+                    <button type="submit">Adicionar</button>
+                </div>
+            </form>
+        </div>
+</body>
+</html>

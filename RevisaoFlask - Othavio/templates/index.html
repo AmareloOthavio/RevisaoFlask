@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+    <h1>Lista de filmes</h1>
+        <!--  idfilme[0], nomefilme[1], lancamento[2] -->
+        {% for filme in filmes %}
+        <div class="bloco-filme">
+            <h1>{{ filme[1] }}</h1>
+            <h2>{{ filme[2] }}</h2>
+            <p>
+                Id: {{ filme[0] }}
+            </p>
+            <p><a href="/editar_filme/{{ loop.index0 }}" class="clicavel">Editar</a></p>
+            <p><a href="/excluir_filme/{{ loop.index0 }}" class="clicavel">Excluir filme</a></p>
+        </div>
+        {% endfor %}
+    <a href="/adicionar_filme" class="clicavel">Adicionar novo filme </a>
+</body>
+</html>
