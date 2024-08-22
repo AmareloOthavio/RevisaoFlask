@@ -13,7 +13,10 @@
             <input type="text" id="nomefilme" name="nomefilme" value="{{ filme[1] }}" required>
 
             <label for="lancamento">Ano de lançamento do filme: </label>
-            <input type="number" id="lancamento" name="lancamento" max="2024" min="1888" required>
+            <input type="number" id="lancamento" name="lancamento" max="2024" min="1888" placeholder="Ano de lançamento do filme (1888-2025)" required>
+
+            <label for="criador">Criador:</label>
+                <input type="text" id="criador" name="criador" placeholder="Estúdio ou diretor" required>
 
             <div>
                 <button type="submit" class="botao-especial">Salvar Alterações</button>

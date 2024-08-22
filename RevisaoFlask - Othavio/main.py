@@ -14,7 +14,8 @@ def adicionar_filme():
         nomefilme = request.form['nomefilme']
         lancamento = request.form['lancamento']
         idfilme = len(filmes)
-        filmes.append([idfilme, nomefilme, lancamento])
+        criador = request.form['criador']
+        filmes.append([idfilme, nomefilme, lancamento, criador])
         return redirect('/')
     else:
         return render_template('adicionar_filme.html')
@@ -25,9 +26,10 @@ def editar_filme(idfilme):
     if request.method == 'POST':
         nomefilme = request.form['nomefilme']
         lancamento = request.form['lancamento']
+        criador = request.form['criador']
 
 
-        filmes[idfilme] = [idfilme, nomefilme, lancamento]
+        filmes[idfilme] = [idfilme, nomefilme, lancamento, criador]
 
         return redirect('/')
     else:
