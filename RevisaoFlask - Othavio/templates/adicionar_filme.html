@@ -12,13 +12,13 @@
             <form action="/adicionar_filme" method="POST" class="organizar">
 
                 <label for="nomefilme">Nome do filme:</label>
-                <input type="text" id="nomefilme" name="nomefilme" placeholder="O nome do filme" required>
+                <input type="text" id="nomefilme" name="nomefilme" placeholder="O nome do filme" maxlength="130" required>
 
                 <label for="lancamento">Lançamento:</label>
                 <input type="number" id="lancamento" name="lancamento" placeholder="Ano de lançamento do filme (1888-2025)" max="2025" min="1888" required>
 
                 <label for="criador">Criador:</label>
-                <input type="text" id="criador" name="criador" placeholder="Estúdio ou diretor" required>
+                <input type="text" id="criador" name="criador" placeholder="Estúdio ou diretor" maxlength="130" required>
 
                 <div>
                     <button type="submit">Adicionar</button>
